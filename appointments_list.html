@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Appointments - Career Guidance System</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://babafaridgroup.edu.in/assets/img/bfgi/free-career-guidance.jpg'); /* Replace with actual image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+
+        /* Navbar styling */
+        nav {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            z-index: 1000; /* Ensures the navbar stays on top */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Lighten on hover */
+            border-radius: 5px;
+        }
+
+        /* Container for appointments list */
+        .container {
+            max-width: 800px;
+            margin: 100px auto; /* Space from top to accommodate navbar */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50; /* Green background for header */
+            color: white; /* White text */
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2; /* Zebra stripes */
+        }
+
+        tr:hover {
+            background-color: #ddd; /* Highlight on hover */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="appointment.html">Book Appointment</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>My Appointments</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example rows, you can replace these with dynamic data -->
+                <tr>
+                    <td>2024-10-10</td>
+                    <td>10:00 AM</td>
+                    <td>John Doe</td>
+                    <td>john@example.com</td>
+                </tr>
+                <tr>
+                    <td>2024-10-12</td>
+                    <td>02:00 PM</td>
+                    <td>Jane Smith</td>
+                    <td>jane@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

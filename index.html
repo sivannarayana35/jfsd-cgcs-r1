@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <title>Career Guidance System</title>
+    <style>
+        /* Apply background image to the body */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe'); /* Replace with your preferred image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh; /* Full height */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar styling - fixed at the top */
+        nav {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            z-index: 1000; /* Ensures the navbar stays on top */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Lighten on hover */
+            border-radius: 5px;
+        }
+
+        /* General container styling */
+        .container {
+            text-align: center;
+            padding: 60px 20px 20px; /* Adjusted padding to account for navbar */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            color: white; /* Change the text color to white */
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 100px auto; /* Space from top to accommodate navbar */
+        }
+
+        /* Header styling */
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: white; /* Set header text color to white */
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: white; /* Ensure paragraph text is also white */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="counselingDiary.html">Counseling Diary</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="appointment.html">Book Appointment</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Page Content -->
+    <div class="container">
+        <header>
+            <h1>Welcome to the Career Guidance System</h1>
+            <p>Your journey to informed career decisions starts here!</p>
+        </header>
+    </div>
+</body>
+</html>

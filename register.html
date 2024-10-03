@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Career Guidance System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        /* Apply background image to the body */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe'); /* Background image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh; /* Full height */
+            font-family: Arial, sans-serif;
+            color: white; /* Text color */
+        }
+
+        /* Navbar styling - fixed at the top */
+        nav {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            z-index: 1000; /* Ensures the navbar stays on top */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Lighten on hover */
+            border-radius: 5px;
+        }
+
+        /* General container styling */
+        .container {
+            text-align: center;
+            padding: 80px 20px; /* Adjusted padding for the form */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for form */
+            border-radius: 10px;
+            max-width: 400px; /* Limit the width of the form */
+            margin: 100px auto; /* Space from top to accommodate navbar */
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column; /* Stack form elements vertically */
+            gap: 15px; /* Space between elements */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer; /* Pointer cursor */
+            transition: background-color 0.3s; /* Transition effect */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        /* Error message styling */
+        .error {
+            color: red; /* Error text color */
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Registration Form Container -->
+    <div class="container">
+        <h2>Register</h2>
+        <form id="registerForm" onsubmit="return validateRegister()">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+            <input type="submit" value="Register">
+        </form>
+        
+        <p id="registerError" class="error"></p>
+        
+        <!-- Section for Existing Users to Login -->
+        <p>Already have an account? <a href="login.html">Login Here</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counseling Diary - Career Guidance System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function validateDiaryEntry() {
+            // Perform any validation here if needed
+            const date = document.getElementById('date').value;
+            const entry = document.getElementById('entry').value;
+            const diaryError = document.getElementById('diaryError');
+
+            // Clear previous error message
+            diaryError.textContent = '';
+
+            // Simple validation
+            if (!date || !entry) {
+                diaryError.textContent = 'Please fill in both fields.';
+                return false; // Prevent form submission
+            }
+
+            // Redirect to home page
+            window.location.href = 'index.html'; // Redirect to the home page
+            return false; // Prevent default form submission
+        }
+    </script>
+    <style>
+        /* Apply background image to the body */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://studytribune.com/wp-content/uploads/2022/10/CAREER-COUNSELLING.png'); /* Background image URL */
+            background-size: cover; /* Cover entire viewport */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Prevent image repeat */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Font styling */
+        }
+
+        /* Navbar styling - fixed at the top */
+        nav {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            z-index: 1000; /* Ensures the navbar stays on top */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Lighten on hover */
+            border-radius: 5px;
+        }
+
+        /* General container styling */
+        .container {
+            text-align: center;
+            padding: 100px 20px; /* Adjusted padding for the form */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for form */
+            border-radius: 10px;
+            max-width: 600px; /* Limit the width of the form */
+            margin: 100px auto; /* Space from top to accommodate navbar */
+            color: white; /* Text color */
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column; /* Stack form elements vertically */
+            gap: 15px; /* Space between elements */
+            text-align: left; /* Left align the form elements */
+        }
+
+        input[type="date"],
+        textarea {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer; /* Pointer cursor */
+            transition: background-color 0.3s; /* Transition effect */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        /* Error message styling */
+        .error {
+            color: red; /* Error text color */
+            margin-top: 10px;
+        }
+
+        /* Image styling */
+        .diary-image {
+            max-width: 100%; /* Responsive image */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 20px; /* Space below the image */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Counseling Diary Form Container -->
+    <div class="container">
+        <h2>Counseling Diary</h2>
+        
+        
+        <form id="diaryForm" onsubmit="return validateDiaryEntry()">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="entry">Diary Entry:</label>
+            <textarea id="entry" name="entry" rows="10" required></textarea>
+            
+            <input type="submit" value="Save Entry">
+        </form>
+        <p id="diaryError" class="error"></p>
+    </div>
+</body>
+</html>

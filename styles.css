@@ -1,0 +1,266 @@
+/* Apply full-screen background settings */
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out; /* Smooth transition between images */
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* General container styling */
+.container {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Header styling */
+header h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Dashboard styling */
+.dashboard {
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.dashboard h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.dashboard ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dashboard ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.dashboard ul li a {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s;
+}
+
+.dashboard ul li a:hover {
+    color: #0056b3;
+}
+
+/* Navigation styling */
+.navbar {
+    background-color: #007BFF;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Feedback form container centered */
+.feedback-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+/* Styling for the form elements */
+#feedbackForm h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#feedbackForm label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+#feedbackForm input, 
+#feedbackForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#feedbackForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#feedbackForm button:hover {
+    background-color: #0056b3;
+}
+/* Apply full-screen background settings */
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out; /* Smooth transition between images */
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Background image array for rotating backgrounds */
+let backgroundImages = [    "url('https://example.com/image1.jpg')",    "url('https://example.com/image2.jpg')",    "url('https://example.com/image3.jpg')"];
+
+/* Function to rotate the background images */
+function rotateBackgroundImages() {
+    let index = 0;
+    setInterval(function() {
+        document.body.style.backgroundImage = backgroundImages[index];
+        index = (index + 1) % backgroundImages.length;
+    }, 5000); /* Change image every 5 seconds */
+}
+
+rotateBackgroundImages(); /* Start background rotation */
+
+/* General container styling */
+.container {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Header styling */
+header h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Feedback form container centered */
+.feedback-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+/* Styling for the navigation bar */
+.navbar {
+    background-color: #007BFF;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Home page styling */
+.dashboard {
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.dashboard h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.dashboard ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dashboard ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.dashboard ul li a {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s;
+}
+
+.dashboard ul li a:hover {
+    color: #0056b3;
+}

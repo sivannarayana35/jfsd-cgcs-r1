@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Career Guidance System</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Apply background image to the body */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe'); /* Background image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh; /* Full height */
+            font-family: Arial, sans-serif;
+            color: white; /* Text color */
+        }
+
+        /* Navbar styling - fixed at the top */
+        nav {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            z-index: 1000; /* Ensures the navbar stays on top */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Lighten on hover */
+            border-radius: 5px;
+        }
+
+        /* Feedback form container styling */
+        .feedback-container {
+            text-align: center;
+            padding: 80px 20px; /* Adjusted padding for the form */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for form */
+            border-radius: 10px;
+            max-width: 400px; /* Limit the width of the form */
+            margin: 100px auto; /* Space from top to accommodate navbar */
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column; /* Stack form elements vertically */
+            gap: 15px; /* Space between elements */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer; /* Pointer cursor */
+            transition: background-color 0.3s; /* Transition effect */
+        }
+
+        button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="counselingDiary.html">Counseling Diary</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+
+    <!-- Feedback Form Container -->
+    <div class="feedback-container">
+        <form id="feedbackForm">
+            <h2>Feedback Form</h2>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your feedback" rows="5" required></textarea>
+            
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>
